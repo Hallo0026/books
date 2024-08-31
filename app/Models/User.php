@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Book;
 
 class User extends Authenticatable
 {
@@ -44,4 +45,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    public function books()
+    {
+        return $this->belongsToMany(Book::class, 'user_books')
+                    ->withPivot('is_read')
+                    ->withTimestamps();
+    }
+
 }
