@@ -10,7 +10,7 @@ class Book extends Model
 {
     use HasFactory;
 
-    //protected $fillable = ['title', 'published_year', 'genre', 'author_id'];
+    protected $fillable = ['title', 'published_year', 'genre', 'author_id'];
 
     public function author()
     {
@@ -23,6 +23,5 @@ class Book extends Model
                     ->withPivot('is_read')
                     ->withTimestamps();
     }
-
 
 }
