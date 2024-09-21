@@ -33,6 +33,7 @@ const showingNavigationDropdown = ref(false);
                                     Dashboard
                                 </NavLink>
                             </div>
+
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('books.index')" :active="route().current('books.index')">
                                     Livros
@@ -153,9 +154,9 @@ const showingNavigationDropdown = ref(false);
                 <slot />
             </main>
 
-            <footer class="absolute bottom-0">
+            <!--<footer class="static bottom-0 w-full text-center bg-slate-500 p-2">
                 Footer
-            </footer>
+            </footer>-->
 
         </div>
     </div>

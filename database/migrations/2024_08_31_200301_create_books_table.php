@@ -13,8 +13,8 @@ return new class extends Migration
             $table->string('isbn')->unique()->nullable();
             $table->string('title');
             $table->string('description')->nullable();
-            $table->foreignId('author_id')->constrained()->onDelete('cascade')->nullable();
-            $table->string('cover')->nullable();
+            $table->foreignId('author_id')->nullable()->constrained()->onDelete('set null');
+            $table->string('cover')->nullable()->default('img/default_book.png');
             $table->integer('published_year')->nullable();
             $table->string('genre')->nullable();
             $table->timestamps();

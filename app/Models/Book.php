@@ -17,11 +17,4 @@ class Book extends Model
         return $this->belongsTo(Author::class);
     }
 
-    public function users()
-    {
-        return $this->belongsToMany(User::class, 'user_books')
-                    ->withPivot('is_read')
-                    ->withTimestamps();
-    }
-
 }

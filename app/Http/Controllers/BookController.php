@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use App\Models\Book;
 use App\Models\Author;
 use Illuminate\Http\Request;
@@ -12,7 +14,7 @@ class BookController extends Controller
 
     public function index()
     {
-        $books = Book::with('author')->get();
+        $books = Book::with('author')->where('user_id', Auth::id())->get();
         return Inertia::render('Books/Index', [
             'books' => $books,
         ]);
@@ -30,6 +32,9 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
+
+        $book = new Book();
+
         $request->validate([
             'title' => 'required|string|max:255',
             'published_year' => 'required|integer',
@@ -37,7 +42,12 @@ class BookController extends Controller
             'author_id' => 'nullable|exists:authors,id',
         ]);
 
-        Book::create($request->all());
+        $book->user_id = Auth::id();
+        $book->title = $request->title;
+        $book->published_year = $request->published_year;
+        $book->genre = $request->genre;
+        $book->author_id = $request->author_id;
+        $book->save();
 
         return to_route('books.index');
 
