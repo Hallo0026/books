@@ -34,6 +34,7 @@ const props = defineProps(['book']);
 
         <progress class="book-progress-bar" value="50" max="100">
         </progress>
+        
     </div>
 </template>
 
