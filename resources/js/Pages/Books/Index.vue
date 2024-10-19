@@ -3,19 +3,27 @@
     import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
     import Book from '@/Components/Book.vue';
     import Modal from '@/Components/Modal.vue';
-    import { Head, router } from '@inertiajs/vue3';
-    import { defineProps, ref } from 'vue';
+    import Toast from '@/Components/Toast.vue';
+    import { Head, router, usePage } from '@inertiajs/vue3';
+    import { defineProps, ref, computed, watch } from 'vue';
 
     const props = defineProps(['books']);
+    const page = usePage();
+    const flash = computed(() => page.props?.flash || { success: null, error: null });
 
     let isModalOpen = ref(false);
+    let selectedBook = ref(null);
 
-    function openModal() {
+
+    function openModal(book) {
+        selectedBook.value = book;
         isModalOpen.value = true;
+        console.log(selectedBook.value);
     }
 
     function closeModal() {
         isModalOpen.value = false;
+        selectedBook.value = null;
     }
 
     function toggleisRead(id) {
@@ -28,6 +36,10 @@
         }
     }
 
+    function updateBookPagesRead(id, pages_read) {
+        router.put(`/books/${id}/updatePagesRead`, { pages_read });
+    }
+
 </script>
 
 <template>
@@ -35,6 +47,8 @@
     <AuthenticatedLayout>
 
         <div class="container">
+
+            <Toast :successMessage="flash.success" :errorMessage="flash.error" />
 
             <Head title="Livros"></Head>
 
@@ -44,7 +58,7 @@
 
             <div class="books-list">
 
-                <div v-for="book in books" :key="book.id" class="book">
+                <div v-for="book in books" :key="book.id" class="book" @click="openModal(book)">
 
                     <Book :book="book"></Book>
 
@@ -52,37 +66,53 @@
 
             </div>
 
-            <button
-            type="button"
-            class="btn"
-            @click="openModal"
-            >
-            Open Modal!
-            </button>
-
-            <Modal
-                v-show="isModalOpen"
-
-                @close="closeModal"
-            >
-
-                <template v-slot:header>
-                    This is a new modal header.
-                </template>
-
-                <template v-slot:body>
-                    This is a new modal body.
-                </template>
-
-                <template v-slot:footer>
-                    This is a new modal footer.
-                </template>
-
-            </Modal>
-
         </div>
 
+
+
+        <Modal v-show="isModalOpen" @close="closeModal">
+
+            <template #header>
+                <h2>{{ selectedBook?.title || 'Detalhes do Livro' }}</h2>
+                <p v-if="selectedBook?.author" class="book-author">
+                    {{ selectedBook?.author.name || '' }}
+                </p>
+            </template>
+
+            <template #body>
+                <p class="modal-book-description">
+                    {{ selectedBook?.description || '' }}
+                </p>
+
+                <div class="modal-book-pages text-center">
+
+                    <div>
+                        <div class="modal-pages-read-title">
+                            Página atual:
+                        </div>
+                        <input
+                            v-if="selectedBook"
+                            class="modal-pages-read-input"
+                            type="number"
+                            v-model="selectedBook.pages_read"
+                            @change="updateBookPagesRead(selectedBook.id, selectedBook.pages_read)"
+                        >
+                    </div>
+
+                    <!--<div>{{ selectedBook?.pages_read || 0 }} de {{ selectedBook?.total_pages || 0 }} páginas lidas</div>
+                    <progress :value="selectedBook?.pages_read || 0" :max="selectedBook?.total_pages || 0"></progress>-->
+                </div>
+
+            </template>
+
+            <!--<template #footer>
+                <button @click="closeModal">Fechar</button>
+            </template>-->
+
+        </Modal>
+
     </AuthenticatedLayout>
+    
 </template>
 
 <style scoped>
@@ -95,8 +125,6 @@
     }
 
     .new-book-btn {
-        /*background-color: rgb(100, 180, 117);
-        font-weight: 600;*/
         padding: 10px;
         border-radius: 8px;
         margin: 9px;

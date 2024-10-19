@@ -40,6 +40,7 @@ class BookController extends Controller
             'published_year' => 'required|integer',
             'genre' => 'nullable|string|max:255',
             'author_id' => 'nullable|exists:authors,id',
+            'total_pages' => 'required|integer|min:1',
         ]);
 
         $book->user_id = Auth::id();
@@ -49,9 +50,9 @@ class BookController extends Controller
         $book->author_id = $request->author_id;
         $book->save();
 
-        return to_route('books.index');
+        //return to_route('books.index');
 
-        //return redirect()->route('books.index')->with('success', 'The book was created successfully!');
+        return redirect()->route('books.index')->with('success', 'Livro criado com sucesso!');
     }
 
 
@@ -84,7 +85,7 @@ class BookController extends Controller
     
         $book->update($request->all());
     
-        return redirect()->route('books.index')->with('success', 'Book updated successfully!');
+        return redirect()->route('books.index')->with('success', 'Livro atualizado com sucesso!');
     }
 
 
@@ -92,6 +93,27 @@ class BookController extends Controller
     {
         $book->delete();
 
-        return redirect()->route('books.index')->with('success', 'Book deleted successfully!');
+        return redirect()->route('books.index')->with('success', 'Livro deletado com sucesso!');
     }
+
+
+    public function updatePagesRead(Request $request, Book $book)
+    {
+        $request->validate([
+            'pages_read' => 'required|integer|min:0',
+        ]);
+
+        $book_total_pages = $book->total_pages;
+
+        if($request->pages_read > $book_total_pages) {
+            return redirect()->back()->with('error', 'O número de páginas lidas não pode ser maior que o total de páginas do livro!');
+        }
+
+        $book->pages_read = $request->pages_read;
+        $book->completed = $book->pages_read == $book->total_pages ? true : false;
+        $book->save();
+
+        return redirect()->route('books.index')->with('success', 'Páginas atualizadas com sucesso!');
+    }
+
 }
