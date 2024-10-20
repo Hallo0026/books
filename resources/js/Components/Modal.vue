@@ -86,29 +86,31 @@
         border-radius: 8px;
     }
 
-    .modal-header,
-    .modal-footer {
+    .modal-header{
         padding: 15px;
         display: flex;
         flex-direction: column;
-    }
-
-    .modal-header .book-author {
-        font-size: .9rem;
-        color: #7e7e7e;
-    }
-
-    .modal-header {
         position: relative;
-        background-color: #ededed;
+        background-color: #f9f9f9;
         font-size: 1.4rem;
         font-weight: 500;
-        justify-content: space-between;
+        justify-content: space-between;  
+        border-bottom: 1px solid #e2e2e2;    
     }
 
     .modal-footer {
-        border-top: 1px solid #eeeeee;
-        flex-direction: column;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #f9f9f9;
+        border-top: 1px solid #e2e2e2;    
+    }
+
+    .modal-header .book-author {
+        font-size: 1rem;
+        margin-top: -4px;
+        color: #7e7e7e;
     }
 
     .modal-pages-read-title {

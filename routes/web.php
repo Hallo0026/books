@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/books/{book}', [BookController::class, 'update'])->name('books.update');
     Route::delete('/books/{book}', [BookController::class, 'destroy'])->name('books.destroy');
     Route::put('/books/{book}/updatePagesRead', [BookController::class, 'updatePagesRead'])->name('books.update_pages_read');
+    Route::put('/books/{book}/updateImage', [BookController::class, 'updateImage'])->name('books.update_image');
 
 });
 

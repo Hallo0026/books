@@ -18,7 +18,6 @@
     function openModal(book) {
         selectedBook.value = book;
         isModalOpen.value = true;
-        console.log(selectedBook.value);
     }
 
     function closeModal() {
@@ -53,7 +52,7 @@
             <Head title="Livros"></Head>
 
             <div class="text-right">
-                <a href="/books/create" class="new-book-btn">Adicionar novo livro +</a>
+                <a href="/books/create" class="new-book-btn font-medium">Adicionar novo livro +</a>
             </div>
 
             <div class="books-list">
@@ -86,28 +85,32 @@
 
                 <div class="modal-book-pages text-center">
 
-                    <div>
-                        <div class="modal-pages-read-title">
-                            Página atual:
-                        </div>
-                        <input
-                            v-if="selectedBook"
-                            class="modal-pages-read-input"
-                            type="number"
-                            v-model="selectedBook.pages_read"
-                            @change="updateBookPagesRead(selectedBook.id, selectedBook.pages_read)"
-                        >
+                    
+                    <div class="modal-pages-read-title">
+                        Página atual:
                     </div>
+                    <input
+                        v-if="selectedBook"
+                        class="modal-pages-read-input"
+                        type="number"
+                        v-model="selectedBook.pages_read"
+                        @change="updateBookPagesRead(selectedBook.id, selectedBook.pages_read)"
+                    >
 
-                    <!--<div>{{ selectedBook?.pages_read || 0 }} de {{ selectedBook?.total_pages || 0 }} páginas lidas</div>
-                    <progress :value="selectedBook?.pages_read || 0" :max="selectedBook?.total_pages || 0"></progress>-->
+                    <progress class="book-progress-bar" :value="selectedBook?.pages_read || 0" :max="selectedBook?.total_pages || 0"/>
+
+                    <div class="book-progress-text">{{ selectedBook?.pages_read || 0 }} de {{ selectedBook?.total_pages || 0 }}
+                        páginas lidas
+                    </div>
+                                                                
                 </div>
 
             </template>
 
-            <!--<template #footer>
-                <button @click="closeModal">Fechar</button>
-            </template>-->
+            <template #footer>
+                <button class="font-bold text-gray-600 text-lg" @click="closeModal">Voltar</button>
+                <button class="font-bold text-blue-900 text-lg" @click="router.get(`/books/${selectedBook.id}/edit`)">Editar</button>
+            </template>
 
         </Modal>
 
@@ -126,10 +129,13 @@
 
     .new-book-btn {
         padding: 10px;
-        border-radius: 8px;
         margin: 9px;
         font-size: 1.2rem;
         color: #313131;
+    }
+
+    .new-book-btn:hover {
+        border-bottom: 1px solid #a5a5a5;
     }
 
 </style>

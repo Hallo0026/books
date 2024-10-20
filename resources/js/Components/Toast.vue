@@ -1,8 +1,16 @@
+<template>
+    <transition name="fade" @after-leave="clearFlash">
+        <div v-if="isVisible && message" :class="['toast', typeClass]" @click="isVisible = false">
+            {{ message }}
+        </div>
+    </transition>
+</template>
+
 <script setup>
 import { ref, watch, onUnmounted } from 'vue';
 import { defineProps } from 'vue';
 
-// Define as propriedades do componente
+// Definindo as propriedades do componente
 const props = defineProps({
     successMessage: {
         type: String,
@@ -22,6 +30,7 @@ let hideTimeout = null;
 
 // Função para mostrar o Toast
 function showToast() {
+
     if (props.successMessage) {
         message.value = props.successMessage;
         typeClass.value = 'toast-success';
@@ -33,12 +42,10 @@ function showToast() {
     if (message.value) {
         isVisible.value = true;
         
-        // Limpar qualquer timeout anterior
         if (hideTimeout) {
             clearTimeout(hideTimeout);
         }
         
-        // Ocultar o Toast após 3 segundos
         hideTimeout = setTimeout(() => {
             isVisible.value = false;
         }, 3000);
@@ -51,7 +58,10 @@ function clearFlash() {
 }
 
 // Watch para detectar mudanças nas mensagens e chamar showToast
-watch(() => [props.successMessage, props.errorMessage], showToast, { immediate: true });
+watch(() => [props.successMessage, props.errorMessage], () => {
+    isVisible.value = false;
+    setTimeout(showToast, 50);
+}, { deep: true });
 
 // Limpa o timeout quando o componente for desmontado
 onUnmounted(() => {
@@ -61,18 +71,8 @@ onUnmounted(() => {
 });
 </script>
 
-
-<template>
-    <transition name="fade" @after-leave="clearFlash">
-        <div v-if="isVisible && message" :class="['toast', typeClass]">
-            {{ message }}
-        </div>
-    </transition>
-</template>
-
-
 <style>
-/* Estilos para a animação */
+
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.5s;
 }
@@ -80,7 +80,6 @@ onUnmounted(() => {
     opacity: 0;
 }
 
-/* Estilos para o Toast */
 .toast {
     position: absolute;
     z-index: 1000;
@@ -89,6 +88,7 @@ onUnmounted(() => {
     border-radius: 12px;
     margin-bottom: 10px;
     font-weight: 600;
+    cursor: pointer;
 }
 .toast-success {
     background-color: #d4edda;

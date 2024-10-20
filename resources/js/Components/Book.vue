@@ -17,11 +17,6 @@ const props = defineProps(['book']);
                 <img v-if="book.cover" :src="`/storage/${book.cover}`" />
                 <img v-else :src="`/storage/${book.cover}`"/>
 
-                <!--<button @click="$emit('toggleisRead', book.id)" :class="{isRead : book.isRead}">
-                    <i class="fa-solid fa-eye"></i>
-                    <span>{{ book.isRead ? 'Já li' : 'Ainda não li' }}</span>
-                </button>-->
-
             </div>
 
             <div class="book-details">                        
@@ -29,9 +24,16 @@ const props = defineProps(['book']);
                 <p v-if="book.author" class="book-author">
                     {{ book.author.name }}
                 </p>
-                <p class="book-description">{{ book.description }}</p>
-                <p class="book-published_year">Publicado em {{ book.published_year }}</p>
-                <p><i class="fa-solid fa-hashtag icon"></i> {{ book.isbn }}</p>
+                <p class="book-description" v-if="book.description">{{ book.description }}</p>
+
+                <p class="book-published_year" v-if="book.published_year">
+                    Publicado em {{ book.published_year }}
+
+                    <span class="float-right" v-if="book.isbn">
+                        {{ book.isbn }}
+                    </span>
+                </p>
+
             </div>
 
             <div v-if="book.total_pages">
@@ -48,8 +50,6 @@ const props = defineProps(['book']);
             </div>
 
         </div>
-
-        
         
     </div>
 </template>
@@ -68,17 +68,6 @@ const props = defineProps(['book']);
     .book-published_year {
         font-size: .8rem;
         color: #999;
-    }
-
-    .book-progress-bar {
-        width: 100%;
-        height: 4px;
-    }
-
-    .book-progress-text {
-        text-align: center;
-        font-size: .8rem;
-        color: #999;
-    }
+    }    
 
 </style>

@@ -16,6 +16,8 @@
         });
     }
 
+    console.log(props.authors);
+
 </script>
 
 <template>
@@ -47,7 +49,7 @@
                     <label for="author_id">Autor:</label>
                     <select v-model="bookForm.author_id" id="author_id" class="form-control" required>
                         <option v-for="author in authors" :key="author.id" :value="author.id">
-                        {{ author.name }}
+                            {{ author.name }}
                         </option>
                     </select>
                 </div>
