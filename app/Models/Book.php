@@ -10,11 +10,16 @@ class Book extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'published_year', 'genre', 'author_id'];
+    protected $fillable = ['title', 'published_year', 'genre_id', 'author_id'];
 
     public function author()
     {
         return $this->belongsTo(Author::class);
+    }
+
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class);
     }
 
     public function user()
@@ -25,7 +30,7 @@ class Book extends Model
     public $rules = [
         'title' => 'required|string|max:255',
         'published_year' => 'nullable|integer',
-        'genre' => 'nullable|string|max:255',
+        'genre_id' => 'nullable|exists:genres,id|max:255',
         'author_id' => 'nullable|exists:authors,id',
         'isbn' => 'nullable|string|max:255',
         'description' => 'nullable|string|max:255',
@@ -35,15 +40,13 @@ class Book extends Model
 
     public $feedback = [
         'title.required' => 'O campo título é obrigatório.',
-        'title.string' => 'O campo título deve ser uma string.',
+        'title.string' => 'O campo título deve ser um texto.',
         'title.max' => 'O campo título não deve exceder 255 caracteres.',
         'published_year.integer' => 'O campo ano de publicação deve ser um número inteiro.',
-        'genre.string' => 'O campo gênero deve ser uma string.',
         'genre.max' => 'O campo gênero não deve exceder 255 caracteres.',
         'author_id.exists' => 'O autor selecionado é inválido.',
-        'isbn.string' => 'O campo ISBN deve ser uma string.',
         'isbn.max' => 'O campo ISBN não deve exceder 255 caracteres.',
-        'description.string' => 'O campo descrição deve ser uma string.',
+        'description.string' => 'O campo descrição deve ser um texto.',
         'description.max' => 'O campo descrição não deve exceder 255 caracteres.',
         'cover_image.image' => 'A imagem da capa deve ser uma imagem.',
         'cover_image.mimes' => 'A imagem da capa deve ser um arquivo do tipo: jpeg, png, jpg ou svg.',

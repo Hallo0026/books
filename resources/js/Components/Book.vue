@@ -1,6 +1,6 @@
 <script setup>
 
-const props = defineProps(['book']);
+    const props = defineProps(['book']);
 
 </script>
 

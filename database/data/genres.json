@@ -1,0 +1,377 @@
+[
+    {
+        "name": "Ação"
+    },
+    {
+        "name": "Aventura"
+    },
+    {
+        "name": "Comédia"
+    },
+    {
+        "name": "Drama"
+    },
+    {
+        "name": "Ficção Científica"
+    },
+    {
+        "name": "Fantasia"
+    },
+    {
+        "name": "Terror"
+    },
+    {
+        "name": "Suspense"
+    },
+    {
+        "name": "Romance"
+    },
+    {
+        "name": "Psicologia"
+    },
+    {
+        "name": "Documentário"
+    },
+    {
+        "name": "Biografia"
+    },
+    {
+        "name": "Poesia"
+    },
+    {
+        "name": "Conto"
+    },
+    {
+        "name": "Distopia"
+    },
+    {
+        "name": "Realismo Mágico"
+    },
+    {
+        "name": "Mistério"
+    },
+    {
+        "name": "Autoajuda"
+    },
+    {
+        "name": "Infantojuvenil"
+    },
+    {
+        "name": "Infantil"
+    },
+    {
+        "name": "História em Quadrinhos"
+    },
+    {
+        "name": "Literatura Clássica"
+    },
+    {
+        "name": "Ensaios"
+    },
+    {
+        "name": "Erótico"
+    },
+    {
+        "name": "Espionagem"
+    },
+    {
+        "name": "Guerra"
+    },
+    {
+        "name": "Fantasia Sombria"
+    },
+    {
+        "name": "Cyberpunk"
+    },
+    {
+        "name": "Steampunk"
+    },
+    {
+        "name": "Fantasia Urbana"
+    },
+    {
+        "name": "Space Opera"
+    },
+    {
+        "name": "Ficção Histórica"
+    },
+    {
+        "name": "Policial"
+    },
+    {
+        "name": "Noir"
+    },
+    {
+        "name": "Thriller Psicológico"
+    },
+    {
+        "name": "Satírico"
+    },
+    {
+        "name": "Paródia"
+    },
+    {
+        "name": "Épico"
+    },
+    {
+        "name": "Fábula"
+    },
+    {
+        "name": "Mitologia"
+    },
+    {
+        "name": "Religião"
+    },
+    {
+        "name": "Espiritualidade"
+    },
+    {
+        "name": "Ocultismo"
+    },
+    {
+        "name": "Manifesto"
+    },
+    {
+        "name": "Crítica Literária"
+    },
+    {
+        "name": "Humor Negro"
+    },
+    {
+        "name": "Chick Lit"
+    },
+    {
+        "name": "New Adult"
+    },
+    {
+        "name": "Young Adult"
+    },
+    {
+        "name": "Literatura Feminista"
+    },
+    {
+        "name": "LGBTQ+"
+    },
+    {
+        "name": "Contos de Fadas"
+    },
+    {
+        "name": "Ficção Absurdista"
+    },
+    {
+        "name": "Ficção Pulp"
+    },
+    {
+        "name": "Ficção Pós-apocalíptica"
+    },
+    {
+        "name": "Romance Histórico"
+    },
+    {
+        "name": "Ficção Alternativa"
+    },
+    {
+        "name": "Romance Policial"
+    },
+    {
+        "name": "Gótico"
+    },
+    {
+        "name": "Naturalismo"
+    },
+    {
+        "name": "Existencialismo"
+    },
+    {
+        "name": "Expressionismo"
+    },
+    {
+        "name": "Surrealismo"
+    },
+    {
+        "name": "Minimalismo"
+    },
+    {
+        "name": "Ficção Filosófica"
+    },
+    {
+        "name": "Western"
+    },
+    {
+        "name": "Spaghetti Western"
+    },
+    {
+        "name": "Literatura Afro-americana"
+    },
+    {
+        "name": "Romance Paranormal"
+    },
+    {
+        "name": "Slice of Life"
+    },
+    {
+        "name": "Mangá"
+    },
+    {
+        "name": "Light Novel"
+    },
+    {
+        "name": "Graphic Novel"
+    },
+    {
+        "name": "Gastronomia"
+    },
+    {
+        "name": "Direito"
+    },
+    {
+        "name": "Criminalística"
+    },
+    {
+        "name": "Medicina"
+    },
+    {
+        "name": "Tecnologia"
+    },
+    {
+        "name": "Ciências"
+    },
+    {
+        "name": "Biologia"
+    },
+    {
+        "name": "Arqueologia"
+    },
+    {
+        "name": "Natureza"
+    },
+    {
+        "name": "Astronomia"
+    },
+    {
+        "name": "Física"
+    },
+    {
+        "name": "Química"
+    },
+    {
+        "name": "Geografia"
+    },
+    {
+        "name": "História"
+    },
+    {
+        "name": "Sociologia"
+    },
+    {
+        "name": "Antropologia"
+    },
+    {
+        "name": "Filosofia"
+    },
+    {
+        "name": "Artes"
+    },
+    {
+        "name": "Música"
+    },
+    {
+        "name": "Cinema"
+    },
+    {
+        "name": "Teatro"
+    },
+    {
+        "name": "Dança"
+    },
+    {
+        "name": "Pintura"
+    },
+    {
+        "name": "Escultura"
+    },
+    {
+        "name": "Fotografia"
+    },
+    {
+        "name": "Design"
+    },
+    {
+        "name": "Moda"
+    },
+    {
+        "name": "Arquitetura"
+    },
+    {
+        "name": "Urbanismo"
+    },
+    {
+        "name": "Literatura"
+    },
+    {
+        "name": "Poesia"
+    },
+    {
+        "name": "Teoria Literária"
+    },
+    {
+        "name": "Linguística"
+    },
+    {
+        "name": "Gramática"
+    },
+    {
+        "name": "Redação"
+    },
+    {
+        "name": "Jornalismo"
+    },
+    {
+        "name": "Edição"
+    },
+    {
+        "name": "Revisão"
+    },
+    {
+        "name": "Tradução"
+    },
+    {
+        "name": "Economia"
+    },
+    {
+        "name": "Biblioteconomia"
+    },
+    {
+        "name": "História da Literatura"
+    },
+    {
+        "name": "História da Arte"
+    },
+    {
+        "name": "História da Música"
+    },
+    {
+        "name": "História do Cinema"
+    },
+    {
+        "name": "História do Teatro"
+    },
+    {
+        "name": "Matemática"
+    },
+    {
+        "name": "RPG"
+    },
+    {
+        "name": "Agricultura"
+    },
+    {
+        "name": "Saúde e Bem-estar"
+    },
+    {
+        "name": "Esportes"
+    },
+    {
+        "name": "Educação"
+    }
+]

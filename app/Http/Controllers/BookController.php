@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Book;
 use App\Models\Author;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -14,7 +15,7 @@ class BookController extends Controller
 
     public function index()
     {
-        $books = Book::with('author')->get();
+        $books = Book::with('author')->with('genre')->get();
         return Inertia::render('Books/Index', [
             'books' => $books,
         ]);
@@ -31,11 +32,21 @@ class BookController extends Controller
                 ->orWhere('user_id', null)
                 ->orWhere('user_id', 0);
             }
+            
+        )->orderBy('name')->get();
 
-        )->get();
+        $genres = Genre::where(function ($query) use ($userId) {
+
+            $query->where('user_id', $userId)
+                ->orWhere('user_id', null)
+                ->orWhere('user_id', 0);
+            }
+
+        )->orderBy('name')->get();
 
         return Inertia::render('Books/Create', [
             'authors' => $authors,
+            'genres' => $genres,
         ]);
     }
 
@@ -55,7 +66,7 @@ class BookController extends Controller
         $book->completed = false;
         $book->isbn = $request->isbn;
         $book->description = $request->description;
-        $book->genre = $request->genre;
+        $book->genre_id = $request->genre_id;
         $book->author_id = $request->author_id;
 
         if ($request->hasFile('cover_image') && $request->file('cover_image')->isValid()) {
@@ -177,6 +188,5 @@ class BookController extends Controller
 
         return redirect()->route('books.index')->with('success', 'Imagem do livro atualizada com sucesso!');
     }
-
 
 }

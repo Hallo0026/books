@@ -1,0 +1,554 @@
+[
+    {
+        "name": "J.K. Rowling",
+        "biography": "Autora da série Harry Potter."
+    },
+    {
+        "name": "George R.R. Martin",
+        "biography": "Autor de A Song of Ice and Fire."
+    },
+    {
+        "name": "Agatha Christie",
+        "biography": "Rainha do mistério."
+    },
+    {
+        "name": "J.R.R. Tolkien",
+        "biography": "Criador de O Senhor dos Anéis."
+    },
+    {
+        "name": "Mark Twain",
+        "biography": "Famoso por As Aventuras de Tom Sawyer."
+    },
+    {
+        "name": "F. Scott Fitzgerald",
+        "biography": "Autor de O Grande Gatsby."
+    },
+    {
+        "name": "Ernest Hemingway",
+        "biography": "Famoso por O Velho e o Mar."
+    },
+    {
+        "name": "Jane Austen",
+        "biography": "Autora de Orgulho e Preconceito."
+    },
+    {
+        "name": "Charles Dickens",
+        "biography": "Famoso por Grandes Esperanças."
+    },
+    {
+        "name": "Isaac Asimov",
+        "biography": "Pioneiro da ficção científica."
+    },
+    {
+        "name": "Leo Tolstoy",
+        "biography": "Autor de Guerra e Paz."
+    },
+    {
+        "name": "Stephen King",
+        "biography": "Mestre do terror moderno."
+    },
+    {
+        "name": "Virginia Woolf",
+        "biography": "Importante figura do modernismo."
+    },
+    {
+        "name": "Gabriel García Márquez",
+        "biography": "Autor de Cem Anos de Solidão."
+    },
+    {
+        "name": "Herman Melville",
+        "biography": "Autor de Moby Dick."
+    },
+    {
+        "name": "Franz Kafka",
+        "biography": "Famoso por O Processo."
+    },
+    {
+        "name": "Toni Morrison",
+        "biography": "Vencedora do Prêmio Nobel de Literatura."
+    },
+    {
+        "name": "Haruki Murakami",
+        "biography": "Autor contemporâneo japonês."
+    },
+    {
+        "name": "Ray Bradbury",
+        "biography": "Autor de Fahrenheit 451."
+    },
+    {
+        "name": "Maya Angelou",
+        "biography": "Poetisa e ativista dos direitos civis."
+    },
+    {
+        "name": "C.S. Lewis",
+        "biography": "Autor de As Crônicas de Nárnia."
+    },
+    {
+        "name": "Margaret Atwood",
+        "biography": "Autora de O Conto da Aia."
+    },
+    {
+        "name": "Neil Gaiman",
+        "biography": "Famoso por suas obras de fantasia."
+    },
+    {
+        "name": "David Mitchell",
+        "biography": "Autor de Cloud Atlas."
+    },
+    {
+        "name": "Zadie Smith",
+        "biography": "Autora de Dentes Brancos."
+    },
+    {
+        "name": "Chimamanda Ngozi Adichie",
+        "biography": "Voz importante da literatura africana contemporânea."
+    },
+    {
+        "name": "Philip K. Dick",
+        "biography": "Autor de ficção científica influente."
+    },
+    {
+        "name": "William Faulkner",
+        "biography": "Famoso por O Som e a Fúria."
+    },
+    {
+        "name": "Kurt Vonnegut",
+        "biography": "Autor de Matadouro 5."
+    },
+    {
+        "name": "Alice Munro",
+        "biography": "Mestre do conto, vencedora do Nobel."
+    },
+    {
+        "name": "Salman Rushdie",
+        "biography": "Autor de Os Versos Satânicos."
+    },
+    {
+        "name": "Octavia Butler",
+        "biography": "Pioneira da ficção científica afro-americana."
+    },
+    {
+        "name": "John Steinbeck",
+        "biography": "Autor de As Vinhas da Ira."
+    },
+    {
+        "name": "Raymond Carver",
+        "biography": "Famoso por seus contos minimalistas."
+    },
+    {
+        "name": "Gabriel García Márquez",
+        "biography": "Autor de Cem Anos de Solidão."
+    },
+    {
+        "name": "Margaret Atwood",
+        "biography": "Autora de O Conto da Aia."
+    },
+    {
+        "name": "T.S. Eliot",
+        "biography": "Poeta e dramaturgo modernista."
+    },
+    {
+        "name": "Zora Neale Hurston",
+        "biography": "Importante figura do Renascimento do Harlem."
+    },
+    {
+        "name": "Sylvia Plath",
+        "biography": "Poetisa e autora de A Redoma de Vidro."
+    },
+    {
+        "name": "Ralph Ellison",
+        "biography": "Autor de A Invisibilidade do Homem."
+    },
+    {
+        "name": "Kazuo Ishiguro",
+        "biography": "Vencedor do Nobel, autor de Nunca Deixe de Me Amar."
+    },
+    {
+        "name": "Doris Lessing",
+        "biography": "Vencedora do Prêmio Nobel de Literatura."
+    },
+    {
+        "name": "John Updike",
+        "biography": "Autor da série Rabbit."
+    },
+    {
+        "name": "David Foster Wallace",
+        "biography": "Autor de A Faca e a Roda."
+    },
+    {
+        "name": "Don DeLillo",
+        "biography": "Autor de Ruído Branco."
+    },
+    {
+        "name": "Elena Ferrante",
+        "biography": "Autora da série A Amiga Genial."
+    },
+    {
+        "name": "Henrik Ibsen",
+        "biography": "Dramaturgo norueguês, conhecido por Casa de Bonecas."
+    },
+    {
+        "name": "William Golding",
+        "biography": "Autor de O Senhor das Moscas."
+    },
+    {
+        "name": "E.M. Forster",
+        "biography": "Autor de Um Quarto com Vista."
+    },
+    {
+        "name": "Joseph Conrad",
+        "biography": "Autor de O Coração das Trevas."
+    },
+    {
+        "name": "Gustave Flaubert",
+        "biography": "Autor de Madame Bovary."
+    },
+    {
+        "name": "Emile Zola",
+        "biography": "Pioneiro do naturalismo na literatura."
+    },
+    {
+        "name": "Hermann Hesse",
+        "biography": "Autor de O Lobo da Estepe."
+    },
+    {
+        "name": "Philip Roth",
+        "biography": "Autor de Portnoy's Complaint."
+    },
+    {
+        "name": "Marilynne Robinson",
+        "biography": "Autora de Gilead."
+    },
+    {
+        "name": "Italo Calvino",
+        "biography": "Autor de As Cidades Invisíveis."
+    },
+    {
+        "name": "John Banville",
+        "biography": "Autor de O Mar."
+    },
+    {
+        "name": "Julian Barnes",
+        "biography": "Autor de O Sentido de um Fim."
+    },
+    {
+        "name": "Yiyun Li",
+        "biography": "Autora de A Criança da Tempestade."
+    },
+    {
+        "name": "Bernard Malamud",
+        "biography": "Autor de O Fixer."
+    },
+    {
+        "name": "Richard Wright",
+        "biography": "Autor de O Filho do Renegado."
+    },
+    {
+        "name": "Colson Whitehead",
+        "biography": "Autor de The Underground Railroad."
+    },
+    {
+        "name": "Alice Walker",
+        "biography": "Autora de A Cor Púrpura."
+    },
+    {
+        "name": "Nadine Gordimer",
+        "biography": "Vencedora do Nobel, ativista sul-africana."
+    },
+    {
+        "name": "Jhumpa Lahiri",
+        "biography": "Autora de O Nome do Meu Pai."
+    },
+    {
+        "name": "Cormac McCarthy",
+        "biography": "Autor de A Estrada."
+    },
+    {
+        "name": "Neil Simon",
+        "biography": "Dramaturgo e roteirista americano."
+    },
+    {
+        "name": "David Mamet",
+        "biography": "Dramaturgo e roteirista americano."
+    },
+    {
+        "name": "Willa Cather",
+        "biography": "Autora de Minha Árvore de Pêssego."
+    },
+    {
+        "name": "Anne Enright",
+        "biography": "Autora irlandesa, vencedora do Prêmio Booker."
+    },
+    {
+        "name": "Chinua Achebe",
+        "biography": "Autor de Tudo Se Desmorona."
+    },
+    {
+        "name": "Rumi",
+        "biography": "Poeta e místico persa."
+    },
+    {
+        "name": "Svetlana Alexievich",
+        "biography": "Vencedora do Nobel, autora de Vozes de Tchernobyl."
+    },
+    {
+        "name": "Thomas Pynchon",
+        "biography": "Autor de O Arco-Íris da Gravidade."
+    },
+    {
+        "name": "Eudora Welty",
+        "biography": "Autora de A Encontro do Pato Selvagem."
+    },
+    {
+        "name": "Jorge Luis Borges",
+        "biography": "Autor de Ficções."
+    },
+    {
+        "name": "Vladimir Nabokov",
+        "biography": "Autor"
+    },
+    {
+        "name": "Sigmund Freud",
+        "biography": "Pai da psicanálise." 
+    },
+    {
+        "name": "Carl Jung",
+        "biography": "Psiquiatra suíço, fundador da psicologia analítica."
+    },
+    {
+        "name": "Friedrich Nietzsche",
+        "biography": "Filósofo alemão, autor de Assim Falou Zaratustra."
+    },
+    {
+        "name": "Jean-Paul Sartre",
+        "biography": "Filósofo existencialista francês."
+    },
+    {
+        "name": "Simone de Beauvoir",
+        "biography": "Filósofa e escritora feminista."
+    },
+    {
+        "name": "Albert Camus",
+        "biography": "Filósofo e autor de O Estrangeiro."
+    },
+    {
+        "name": "Michel Foucault",
+        "biography": "Filósofo francês, autor de Vigiar e Punir."
+    },
+    {
+        "name": "Eiichiro Oda",
+        "biography": "Autor de One Piece."
+    },
+    {
+        "name": "Akira Toriyama",
+        "biography": "Autor de Dragon Ball."
+    },
+    {
+        "name": "Kentaro Miura",
+        "biography": "Autor de Berserk."
+    },
+    {
+        "name": "Masashi Kishimoto",
+        "biography": "Autor de Naruto."
+    },
+    {
+        "name": "Hirohiko Araki",
+        "biography": "Autor de JoJo's Bizarre Adventure."
+    },
+    {
+        "name": "Osamu Tezuka",
+        "biography": "Mangaka conhecido como o 'Deus do Mangá'."
+    },
+    {
+        "name": "Rumiko Takahashi",
+        "biography": "Autora de InuYasha e Ranma 1/2."
+    },
+    {
+        "name": "Naoko Takeuchi",
+        "biography": "Autora de Sailor Moon."
+    }, 
+    {
+        "name": "Machado de Assis",
+        "biography": "Considerado um dos maiores escritores brasileiros."
+    },
+    {
+        "name": "Clarice Lispector",
+        "biography": "Autora de A Hora da Estrela."
+    },
+    {
+        "name": "Guimarães Rosa",
+        "biography": "Autor de Grande Sertão: Veredas."
+    },
+    {
+        "name": "Jorge Amado",
+        "biography": "Autor de Dona Flor e Seus Dois Maridos."
+    }, 
+    {
+        "name": "Platão",
+        "biography": "Filósofo grego, discípulo de Sócrates."
+    }, 
+    {
+        "name": "Sócrates",
+        "biography": "Filósofo grego, mestre de Platão."
+    },
+    {
+        "name": "Aristóteles",
+        "biography": "Filósofo grego, discípulo de Platão."
+    }, 
+    {
+        "name": "Pitágoras",
+        "biography": "Filósofo e matemático grego."
+    },
+    {
+        "name": "Homero",
+        "biography": "Autor de Ilíada e Odisseia."
+    },
+    {
+        "name": "Virgílio",
+        "biography": "Autor de Eneida."
+    },
+    {
+        "name": "Dante Alighieri",
+        "biography": "Autor de A Divina Comédia."
+    },
+    {
+        "name": "William Shakespeare",
+        "biography": "O maior dramaturgo da língua inglesa."
+    },
+    {
+        "name": "Miguel de Cervantes",
+        "biography": "Autor de Dom Quixote."
+    },
+    {
+        "name": "Johann Wolfgang von Goethe",
+        "biography": "Autor de Fausto."
+    },
+    {
+        "name": "Leo Tolstoy",
+        "biography": "Autor de Guerra e Paz."
+    },
+    {
+        "name": "Fyodor Dostoevsky",
+        "biography": "Autor de Crime e Castigo."
+    },
+    {
+        "name": "Franz Kafka",
+        "biography": "Autor de O Processo."
+    },
+    {
+        "name": "James Joyce",
+        "biography": "Autor de Ulisses."
+    },
+    {
+        "name": "Virginia Woolf",
+        "biography": "Autora de Mrs. Dalloway."
+    },
+    {
+        "name": "Albert Camus",
+        "biography": "Autor de O Estrangeiro."
+    },
+    {
+        "name": "Gabriel García Márquez",
+        "biography": "Autor de Cem Anos de Solidão."
+    },
+    {
+        "name": "Haruki Murakami",
+        "biography": "Autor de 1Q84."
+    },
+    {
+        "name": "Yukio Mishima",
+        "biography": "Autor de O Mar da Fertilidade."
+    },
+    {
+        "name": "Yasunari Kawabata",
+        "biography": "Vencedor do Nobel, autor de Beleza e Tristeza."
+    },
+    {
+        "name": "Kenzaburō Ōe",
+        "biography": "Vencedor do Nobel, autor de Uma Questão Pessoal."
+    },
+    {
+        "name": "Haile Sellasie",
+        "biography": "Imperador da Etiópia, figura histórica importante."
+    },
+    {
+        "name": "Nelson Mandela",
+        "biography": "Líder anti-apartheid e ex-presidente da África do Sul."
+    },
+    {
+        "name": "Martin Luther King Jr.",
+        "biography": "Líder dos direitos civis nos Estados Unidos."
+    },
+    {
+        "name": "Malcolm X",
+        "biography": "Ativista dos direitos civis e líder muçulmano."
+    },
+    {
+        "name": "Mario Quintana",
+        "biography": "Poeta brasileiro."
+    },
+    {
+        "name": "Mario de Andrade",
+        "biography": "Escritor modernista brasileiro."
+    },
+    {
+        "name": "Oscar Wilde",
+        "biography": "Autor de O Retrato de Dorian Gray."
+    },
+    {
+        "name": "George Orwell",
+        "biography": "Autor de 1984."
+    }, 
+    {
+        "name": "Aldous Huxley",
+        "biography": "Autor de Admirável Mundo Novo."
+    },
+    {
+        "name": "Ray Bradbury",
+        "biography": "Autor de Fahrenheit 451."
+    },
+    {
+        "name": "Isaac Asimov",
+        "biography": "Autor de Eu, Robô."
+    },
+    {
+        "name": "Arthur C. Clarke",
+        "biography": "Autor de 2001: Uma Odisseia no Espaço."
+    },
+    {
+        "name": "Willian Shakespeare",
+        "biography": "O maior dramaturgo da língua inglesa."
+    },
+    {
+        "name": "Albert Einstein",
+        "biography": "Físico teórico alemão."
+    },
+    {
+        "name": "Dalai Lama",
+        "biography": "Líder espiritual do budismo tibetano."
+    },
+    {
+        "name": "Leonardo da Vinci",
+        "biography": "Gênio renascentista."
+    },
+    {
+        "name": "Mahatma Gandhi",
+        "biography": "Líder do movimento de independência da Índia."
+    },
+    {
+        "name": "Vinicius de Moraes",
+        "biography": "Poeta e compositor brasileiro."
+    },
+    {
+        "name": "Voltaire",
+        "biography": "Filósofo iluminista francês."
+    },
+    {
+        "name": "Henry Ford",
+        "biography": "Industrial e fundador da Ford Motor Company."
+    },
+    {
+        "name": "Leon Tolstói",
+        "biography": "Autor de Guerra e Paz."
+    }
+]

@@ -6,13 +6,14 @@
     import Toast from '@/Components/Toast.vue';
     import { defineProps, ref } from 'vue';
     import ImageCropper from '@/Components/ImageCropper.vue';
+    import SearchableSelect from '@/Components/SearchableSelect.vue';
 
-    const props = defineProps(['authors']);
+    const props = defineProps(['authors', 'genres']);
 
     const form = useForm({
         title: "",
         published_year: "",
-        genre: "",
+        genre_id: "",
         author_id: "",
         isbn: "",
         description: "",
@@ -21,7 +22,6 @@
     });
 
     let toastMessage = ref('');
-
 
     function addBook() {
 
@@ -64,8 +64,8 @@
             return false;
         }
 
-        if(!form.genre) {
-            form.errors.genre = 'O gênero é obrigatório.';
+        if(!form.genre_id) {
+            form.errors.genre_id = 'O gênero é obrigatório.';
             return false;
         }
 
@@ -130,17 +130,17 @@
         const errors = Object.values(form.errors);
         return errors.length ? errors[0] : 'Ocorreu um erro.';
     }
-    
+
 
     function handleImageCropped(croppedFile) {
         form.cover_image = croppedFile;
         console.log(form.cover_image);
     }
 
-
 </script>
 
 <template>
+
     <Head title="Cadastrar Livro"></Head>
 
     <AuthenticatedLayout>
@@ -196,9 +196,7 @@
                         <div class="form-error-text" v-if="form.errors.total_pages">{{ form.errors.total_pages }}</div>
                     </div>
 
-                </div>
-
-                
+                </div>                
 
 
                 <div class="flex space-x-4">
@@ -216,19 +214,12 @@
 
                     <div class="flex-1 space-y-2">
                         <label for="author_id" class="block text-lg font-medium text-gray-700">Autor:</label>
-                        <select
-                            v-model="form.author_id"
-                            id="author_id"
-                            class="w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                        >
-                            <option :value="null">
-                                Não informar
-                            </option>
-
-                            <option v-for="author in authors" :key="author.id" :value="author.id">
-                                {{ author.name }}
-                            </option>
-                        </select>
+                        <SearchableSelect
+                        id="author_select"
+                        :options="authors"
+                        v-model="form.author_id"
+                        placeholder="Pesquisar autor..."
+                        />
                         <div class="form-error-text" v-if="form.errors.author_id">{{ form.errors.author_id }}</div>
                     </div>
 
@@ -236,17 +227,17 @@
 
 
                 <div class="space-y-2">
-                    <label for="genre" class="block text-lg font-medium text-gray-700">
+                    <label for="genre_id" class="block text-lg font-medium text-gray-700">
                         Gênero:
                         <span class="text-red-500">*</span>
                     </label>
-                    <input
-                        v-model="form.genre"
-                        type="text"
-                        id="genre"
-                        class="w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                    />
-                    <div class="form-error-text" v-if="form.errors.genre">{{ form.errors.genre }}</div>
+                    <SearchableSelect
+                        id="genre_select"
+                        :options="genres"
+                        v-model="form.genre_id"
+                        placeholder="Pesquisar gênero..."
+                        />
+                    <div class="form-error-text" v-if="form.errors.genre_id">{{ form.errors.genre_id }}</div>
                 </div>
 
 
@@ -266,14 +257,6 @@
                 <div class="space-y-2">
                     <label for="cover_image" class="block text-lg font-medium text-gray-700">Imagem da Capa:</label>
                     <ImageCropper @image-cropped="handleImageCropped" />
-                    <!--<input
-                        type="file"
-                        id="cover_image"
-                        class="w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                        @change="handleFileChange"
-                        accept="image/*"
-                    />-->              
-
                 </div>
 
 
@@ -293,9 +276,11 @@
                 >
                     {{ form.progress.percentage }}%
                 </progress>
+
             </form>
         </div>
     </AuthenticatedLayout>
+
 </template>
 
 <style scoped>

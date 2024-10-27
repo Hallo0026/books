@@ -14,6 +14,8 @@
     let isModalOpen = ref(false);
     let selectedBook = ref(null);
 
+    console.log(props);
+
 
     function openModal(book) {
         selectedBook.value = book;

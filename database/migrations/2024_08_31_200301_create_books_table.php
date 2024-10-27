@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('author_id')->nullable()->constrained()->onDelete('set null');
             $table->string('cover')->nullable()->default('img/default_book.png');
             $table->integer('published_year')->nullable();
-            $table->string('genre')->nullable();
+            $table->foreignId('genre_id')->nullable()->constrained()->onDelete('set null');
             $table->timestamps();
         });
     }
